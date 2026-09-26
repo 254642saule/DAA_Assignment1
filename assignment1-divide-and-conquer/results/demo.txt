@@ -1,0 +1,14 @@
+ASSIGNMENT 1 | DIVIDE-AND-CONQUER
+Input: [9, -2, 7, 7, 0, 5, -2, 11]
+MergeSort: [-2, -2, 0, 5, 7, 7, 9, 11]
+  depth=1, calls=1, comparisons=20, swaps=0, distances=0
+QuickSort: [-2, -2, 0, 5, 7, 7, 9, 11]
+  depth=2, calls=2, comparisons=18, swaps=8, distances=0
+Select k=3 (zero-based): 5
+  depth=2, calls=3, comparisons=26, swaps=7, distances=0
+Closest pair: Point[x=3.0, y=4.0] and Point[x=3.1, y=4.1]
+  distance=0.14142136
+  depth=2, calls=3, comparisons=23, swaps=0, distances=5
+Edge cases: empty/single arrays supported; invalid selection rank rejected.
+Run tests: bash scripts/run.sh test
+Run experiments: bash scripts/run.sh experiment

@@ -1,0 +1,6 @@
+PASS sorting: 406 cases per sorter vs Arrays.sort
+PASS selection: 7529 ranks vs Arrays.sort(a)[k]
+PASS closest pair: 175 datasets vs quadratic reference
+PASS contracts: invalid arguments, non-finite points, input preservation
+PASS stack: smaller-first QuickSort, including forced extreme pivots
+ALL TESTS PASSED: 24692 checks

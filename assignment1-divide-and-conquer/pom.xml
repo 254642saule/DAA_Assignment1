@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.assignment</groupId>
+  <artifactId>assignment1-divide-and-conquer</artifactId>
+  <version>1.0.0</version>
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>tests</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>correctness-tests</id>
+            <phase>test</phase>
+            <goals><goal>run</goal></goals>
+            <configuration>
+              <target>
+                <java classname="daa.AlgorithmTests" fork="true" failonerror="true">
+                  <jvmarg value="-Xms128m"/>
+                  <jvmarg value="-Xmx512m"/>
+                  <classpath refid="maven.test.classpath"/>
+                </java>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+        <configuration>
+          <archive><manifest><mainClass>daa.Main</mainClass></manifest></archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

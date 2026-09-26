@@ -1,0 +1,16 @@
+Experiment started (UTC): 2026-09-26T10:44:02.858918679Z
+java.version=17.0.20
+java.vm.name=OpenJDK 64-Bit Server VM
+os.name=Linux
+os.arch=amd64
+os.version=6.18.44
+availableProcessors=8
+maxMemoryBytes=1073741824
+jvmArguments=[-Xms256m, -Xmx1024m]
+sizes=[100, 1000, 10000, 100000, 300000]
+trials=7
+globalWarmups=12 per algorithm/input type, n=10000
+perCaseWarmups=3
+closestPairReferenceSizes=[100, 1000, 2000]
+instrumented=true
+caseShuffleSeed=20260926
