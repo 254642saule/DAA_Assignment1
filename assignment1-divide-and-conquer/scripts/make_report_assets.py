@@ -129,7 +129,6 @@ def font(size, bold=False):
     return ImageFont.load_default()
 
 def output_capture(text, title, source, filename):
-    # No output is invented: preserve the saved lines verbatim.
     lines = text.rstrip().splitlines()
     f = font(20)
     width = max(1080, int(max(f.getlength(line) for line in lines)) + 70)
